@@ -6,12 +6,11 @@ import '../HomePage.css';
 
 const HomePage = () => {
   return (
-    <div className="home-page">
-     
+    <div className="home-page">    
       {/* Hero Section */}
       <section className="hero">
         <h1>Ball Up</h1>
-        <p>Find and connect with basketball courts near you and join the fun!</p>
+        <p>FIND AND CONNECT WITH BASKETBALL COURTS NEAR YOU AND JOIN THE FUN!</p>
         <button>Get Started</button>
       </section>
 

@@ -24,8 +24,12 @@ body {
   }
   
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: BLACK;
+    font-weight: bold;
+    
   }
   
   .hero button {
