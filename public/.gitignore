@@ -1,0 +1,25 @@
+# Node modules
+/node_modules
+
+# Build output
+/build
+
+# Dependency directories
+/.pnp
+/.pnp.js
+
+# VSCode settings
+.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# .env files (for sensitive credentials)
+.env
+.env.*.local
