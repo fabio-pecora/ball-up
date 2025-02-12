@@ -1,22 +1,22 @@
-// App.js
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import AboutUs from './components/AboutUs';
-import LoginPage from './components/LoginPage';
-import SignUpPage from './components/SignUpPage';
-import ContactUsPage from './components/ContactUsPage';
+import Navbar from './components/NavBar';
+import HomePage from './components/HomePage'; // Ensure path is correct
+import Login from './components/Login'; // Ensure path is correct
+import SignUp from './components/SignUp'; // Ensure path is correct
+import ContactUs from './components/ContactUs'; // Ensure path is correct
+import AboutUs from './components/AboutUs'; // If you have an About Us page
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about-us" element={<AboutUs />} /> {/* New route for About Us */}
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} /> {/* Add About Us route */}
       </Routes>
     </Router>
   );
