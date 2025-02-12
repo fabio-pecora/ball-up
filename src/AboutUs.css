@@ -1,22 +1,112 @@
-/* AboutUs.css */
-
-.about-us-page {
-    background-color: #2d2d2d;
-    color: white;
-    padding: 80px 20px;
+/* General Styles */
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
     text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #2d2d2d, #fd6907); /* Gradient background */
+    border-radius: 10px;
   }
   
-  .about-us h2 {
+  /* Section Titles */
+  h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #f47825;
   }
   
-  .about-us p {
+  /* Section Text */
+  p {
     font-size: 1.2rem;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  /* General Section Style */
+  .section {
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Goal Section */
+  .goal {
+    background: #f47825;
+    color: black;
+    border-left: 10px solid #2d2d2d;
+  }
+  
+  .goal h2 {
+    color: white;
+  }
+  
+  .goal p {
+    color: #333;
+  }
+  
+  /* Operate Section */
+  .operate {
+    background: #4b4b4b;
+    border-left: 10px solid #fd6907;
+  }
+  
+  .operate h2 {
+    color: #fd6907;
+  }
+  
+  .operate p {
+    color: white;
+  }
+  
+  /* Future Goal Section */
+  .future-goal {
+    background: #fd6907;
+    border-left: 10px solid #2d2d2d;
+  }
+  
+  .future-goal h2 {
+    color: white;
+  }
+  
+  .future-goal p {
+    color: #333;
+  }
+  
+  /* Team Section */
+  .team {
+    background: #2d2d2d;
+    color: white;
+    border-left: 10px solid #fd6907;
+  }
+  
+  .team h2 {
+    color: #fd6907;
+  }
+  
+  .team p {
+    color: white;
+  }
+  
+  /* Involvement Section */
+  .involvement {
+    background: #4b4b4b;
+    border-left: 10px solid #f47825;
+  }
+  
+  .involvement h2 {
+    color: #f47825;
+  }
+  
+  .involvement p {
+    color: white;
+  }
+  
+  /* Box Shadow Hover Effect */
+  .section:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
   }
   
