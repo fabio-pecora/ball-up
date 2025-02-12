@@ -1,0 +1,174 @@
+/* Overall Background */
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2d2d2d, #fd6907); /* Black to Orange Gradient */
+    color: white;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .navbar .logo img {
+    height: 50px;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: #f47825; /* Orange */
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero button {
+    background-color: #f47825;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero button:hover {
+    background-color: #ff6a00;
+  }
+  
+  /* About Us Section */
+  .about-us {
+    background: #1a1a1a;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f47825;
+  }
+  
+  .about-us p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Search Courts Section */
+  .search-courts {
+    background: #2d2d2d;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .search-courts h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #f47825;
+  }
+  
+  .search-options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .search-option {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 250px;
+    text-align: center;
+  }
+  
+  .search-option h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f47825;
+  }
+  
+  .search-option p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .search-option input {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .search-option button {
+    background-color: #f47825;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-option button:hover {
+    background-color: #ff6a00;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  

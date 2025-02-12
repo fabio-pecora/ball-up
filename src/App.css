@@ -1,159 +1,42 @@
 /* App.css */
 
-/* Root color variables for easy management */
-:root {
-  --black: #1a1a1a;
-  --orange: #f76d2b;
-  --white: #ffffff;
-  --light-gray: #f4f4f4;
-  --dark-gray: #333333;
-  --hover-orange: #d15a10;
-  --button-border: #d1d1d1;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--black);
-  color: var(--white);
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-}
-
-a {
-  color: var(--orange);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Header styles */
-header {
-  background-color: var(--orange);
-  padding: 30px 0;
+.login-page, .signup-page, .contactus-page {
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
-  font-size: 3rem;
-  color: var(--white);
-  text-transform: uppercase;
-}
-
-/* Hero Section */
-.hero {
-  background-color: var(--black);
-  color: var(--white);
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
+.login-page h2, .signup-page h2, .contactus-page h2 {
+  font-size: 2.5em;
   margin-bottom: 20px;
-  font-weight: 600;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.login-page form, .signup-page form, .contactus-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.hero button {
-  background-color: var(--orange);
-  color: var(--white);
-  font-size: 1.2rem;
-  padding: 12px 25px;
+.login-page input, .signup-page input, .contactus-page input, .contactus-page textarea {
+  padding: 10px;
+  font-size: 1.2em;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.login-page button, .signup-page button, .contactus-page button {
+  padding: 12px 30px;
+  font-size: 1.2em;
+  background-color: #ff6600;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero button:hover {
-  background-color: var(--hover-orange);
-}
-
-/* Courts Section (Card Layout) */
-.courts-section {
-  background-color: var(--dark-gray);
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.courts-section h2 {
-  font-size: 2.5rem;
-  color: var(--orange);
-  margin-bottom: 30px;
-}
-
-.court-card {
-  background-color: var(--white);
-  color: var(--black);
-  width: 300px;
-  margin: 15px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-}
-
-.court-card:hover {
-  transform: translateY(-10px);
-}
-
-.court-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.court-card p {
-  font-size: 1rem;
-  color: var(--dark-gray);
-}
-
-/* Footer */
-footer {
-  background-color: var(--black);
-  color: var(--white);
-  padding: 20px;
-  text-align: center;
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 20px;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .court-card {
-    width: 100%;
-    margin: 10px 0;
-  }
+.login-page button:hover, .signup-page button:hover, .contactus-page button:hover {
+  background-color: #cc3300;
 }
