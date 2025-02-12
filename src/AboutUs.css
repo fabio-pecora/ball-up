@@ -62,37 +62,71 @@ p {
 
 /* Operate Section */
 .operate {
-    background: url('https://static.vecteezy.com/system/resources/previews/004/806/882/non_2x/new-york-city-colorful-seamless-pattern-vector.jpg') repeat; /* Seamless background */
-    background-repeat: repeat; /* This will repeat the image horizontally and vertically */
-    background-size: 350px; /* Keep original size for seamless effect */
-    color: #f47825;
-    font-style: italic;
-    border-left: 5px solid #f47825;
-    font-family: 'Georgia', serif; /* Updated font */
+    background: url('https://static.vecteezy.com/system/resources/previews/004/806/882/non_2x/new-york-city-colorful-seamless-pattern-vector.jpg') repeat;
+    background-size: 350px; /* Keeps the original size for seamless effect */
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: space-between;
     padding: 50px;
     align-items: center;
     position: relative;
-    color: white;
-  }
-  
-  .operate h2 {
+    color: #f47825;  /* Orange text color for contrast */
+}
+
+/* Operate Section */
+.operate {
+    background: url('https://static.vecteezy.com/system/resources/previews/004/806/882/non_2x/new-york-city-colorful-seamless-pattern-vector.jpg') repeat;
+    background-size: 350px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    position: relative;
     color: #f47825;
+}
+
+/* Overlay */
+.operate::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Heading */
+.operate h2 {
+    color: #000000;  /* White text for high contrast */
     text-transform: uppercase;
-  }
-  
-  .operate p {
-    color: white;
-    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Paragraph */
+.operate p {
+    color: #000000;  /* Black text */
+    font-weight: bold;
+    font-size: 1.5rem;  /* Increased font size */
     max-width: 600px;
-  }
-  
-  .operate .icon {
+    text-shadow: 0px 0px 30px rgba(249, 133, 0, 1), 0px 0px 40px rgba(249, 133, 0, 0.8), 0px 0px 50px rgba(249, 133, 0, 0.6); /* Intense orange glow */
+    
+    /* Oval-shaped background box */
+    position: relative;
+    padding: 20px;
+    border-radius: 50px;  /* Creates the oval effect */
+    background: rgba(255, 255, 255, 0.7);  /* Light background for text visibility */
+}
+
+/* Icon */
+.operate .icon {
     font-size: 4rem;
     color: #f47825;
-  }
-  
+}
+
+
 
 /* Future Goal Section */
 .future-goal {
