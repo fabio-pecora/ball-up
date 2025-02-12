@@ -1,35 +1,49 @@
- /* Navigation Bar */
- .navbar {
+/* Navbar */
+.navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* Space between logo & links */
     align-items: center;
-    padding: 20px;
-    background: #000000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  }
-  
-  .navbar .logo img {
-    height: 50px;
-  }
-  
-  .navbar .nav-links {
+    background-color: #222;
+    padding: 15px 30px;
+}
+
+/* Logo */
+.logo {
     display: flex;
-    list-style-type: none;
-    gap: 20px;
-  }
-  
-  .navbar .nav-links li {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  .navbar .nav-links li a {
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Spacing between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+/* Nav Buttons & Links */
+.nav-links a, .nav-btn {
+    color: white;
     text-decoration: none;
-    color: #f47825; /* Orange */
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .nav-links li a:hover {
-    color: #fff;
-  }
-  
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-btn:hover, .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
