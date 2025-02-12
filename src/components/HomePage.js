@@ -17,19 +17,14 @@ const HomePage = () => {
           <li><Link to="/login">Login</Link></li>
           <li><Link to="/signup">Sign Up</Link></li>
           <li><Link to="/contact-us">Contact Us</Link></li>
+          <li><Link to="/about-us">About Us</Link></li> {/* Link to About Us page */}
         </ul>
       </nav>
       {/* Hero Section */}
       <section className="hero">
-        <h1>Basketball Finder</h1>
+        <h1>Ball Up</h1>
         <p>Find and connect with basketball courts near you and join the fun!</p>
         <button>Get Started</button>
-      </section>
-
-      {/* About Us Section */}
-      <section id="about-us" className="about-us">
-        <h2>About Us</h2>
-        <p>Basketball Finder is your go-to platform to find local basketball courts and events. Whether you're looking for a pickup game or a private event, we've got you covered!</p>
       </section>
 
       {/* Search Courts Section */}
@@ -54,6 +49,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer>
         <p>&copy; 2025 Basketball Finder. All Rights Reserved.</p>
