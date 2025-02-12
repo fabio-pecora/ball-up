@@ -1,112 +1,205 @@
 /* General Styles */
 .about-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #2d2d2d, #fd6907); /* Gradient background */
-    border-radius: 10px;
-  }
-  
-  /* Section Titles */
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #2d2d2d, #fd6907); /* Gradient background */
+  border-radius: 10px;
+}
+
+/* Section Titles */
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #f47825;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Section Text */
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* General Section Style */
+.section {
+  padding: 50px;
+  margin: 30px 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Goal Section */
+.goal {
+  background: linear-gradient(135deg, #ff6f00, #ff9100); /* Bright gradient */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal h2 {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.goal p {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.goal .icon {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+/* Operate Section */
+.operate {
+    background: url('https://static.vecteezy.com/system/resources/previews/004/806/882/non_2x/new-york-city-colorful-seamless-pattern-vector.jpg') repeat; /* Seamless background */
+    background-repeat: repeat; /* This will repeat the image horizontally and vertically */
+    background-size: 350px; /* Keep original size for seamless effect */
     color: #f47825;
-  }
-  
-  /* Section Text */
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  /* General Section Style */
-  .section {
-    padding: 40px;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Goal Section */
-  .goal {
-    background: #f47825;
-    color: black;
-    border-left: 10px solid #2d2d2d;
-  }
-  
-  .goal h2 {
+    font-style: italic;
+    border-left: 5px solid #f47825;
+    font-family: 'Georgia', serif; /* Updated font */
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    position: relative;
     color: white;
-  }
-  
-  .goal p {
-    color: #333;
-  }
-  
-  /* Operate Section */
-  .operate {
-    background: #4b4b4b;
-    border-left: 10px solid #fd6907;
   }
   
   .operate h2 {
-    color: #fd6907;
+    color: #f47825;
+    text-transform: uppercase;
   }
   
   .operate p {
     color: white;
+    font-weight: 300;
+    max-width: 600px;
   }
   
-  /* Future Goal Section */
-  .future-goal {
-    background: #fd6907;
-    border-left: 10px solid #2d2d2d;
-  }
-  
-  .future-goal h2 {
-    color: white;
-  }
-  
-  .future-goal p {
-    color: #333;
-  }
-  
-  /* Team Section */
-  .team {
-    background: #2d2d2d;
-    color: white;
-    border-left: 10px solid #fd6907;
-  }
-  
-  .team h2 {
-    color: #fd6907;
-  }
-  
-  .team p {
-    color: white;
-  }
-  
-  /* Involvement Section */
-  .involvement {
-    background: #4b4b4b;
-    border-left: 10px solid #f47825;
-  }
-  
-  .involvement h2 {
+  .operate .icon {
+    font-size: 4rem;
     color: #f47825;
   }
   
-  .involvement p {
-    color: white;
+
+/* Future Goal Section */
+.future-goal {
+  background: #2d2d2d;
+  color: white;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.future-goal h2 {
+  color: #fd6907;
+  font-weight: bold;
+}
+
+.future-goal p {
+  color: #ffffff;
+  max-width: 600px;
+}
+
+.future-goal .icon {
+  font-size: 4rem;
+  color: white;
+}
+
+/* Team Section */
+.team {
+  background: linear-gradient(45deg, #4caf50, #81c784); /* Green gradient */
+  color: white;
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+}
+
+.team h2 {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.team p {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.team .icon {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+/* Involvement Section */
+.involvement {
+  background: url('https://via.placeholder.com/1200x400/ff9100/FFFFFF?text=Get+Involved') no-repeat center center/cover; /* Background image */
+  color: white;
+  text-align: center;
+  font-style: italic;
+  border-left: 5px solid #f47825;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.involvement h2 {
+    font-family: 'Courier New', Courier, monospace;
+  color: #f47825;
+  font-size: 3rem;
+}
+
+.involvement p {
+  color: white;
+  font-weight: 300;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 600px;
+}
+
+.involvement .icon {
+  font-size: 4rem;
+  color: #f47825;
+  margin-top: 20px;
+}
+
+/* Section Hover Effect */
+.section:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation for Sections */
+.section {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  /* Box Shadow Hover Effect */
-  .section:hover {
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
