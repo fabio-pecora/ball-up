@@ -1,0 +1,64 @@
+/* ContactForm.css */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .contact-card {
+    background: linear-gradient(135deg, #ff8c00, #ff4500);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .input-icon {
+    margin-right: 10px;
+    color: white;
+  }
+  
+  .input-field {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+  }
+  
+  .input-field::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .submit-btn {
+    background: black;
+    color: orange;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: gray;
+  }
+  
+  .contact-color {
+    color: #080706;
+    text-align: center;
+  }
