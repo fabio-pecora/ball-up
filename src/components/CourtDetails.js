@@ -9,6 +9,7 @@ const CourtDetails = ({ court }) => {
   const handleCheckIn = () => {
     setIsGoing(!isGoing);
   };
+  
 
   return (
     <div>
