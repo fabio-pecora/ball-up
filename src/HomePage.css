@@ -7,9 +7,7 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #e70505, #fd6907); /* Black to Orange Gradient */
   }
-  .home-page .hero h1 {
-    color: black;
-  }
+  
   
 
   .hero {
@@ -126,7 +124,7 @@ body {
     font-family: 'Bebas Neue', sans-serif; 
     font-size: 5rem;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #ff8800, #ff4400); /* Orange gradient */
+    background: linear-gradient(80deg, #181510, #ff4400);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
