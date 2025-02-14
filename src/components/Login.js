@@ -1,14 +1,30 @@
-// src/components/Login.js
 import React, { useState } from 'react';
 import '../FormStyles.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');  // Add state to store error message
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Basic regex for email validation
+    return regex.test(email);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Logged in with:', email, password);
+    
+    if (!validateEmail(email)) {
+      setError('Email is not in the right format'); // Set error if email is invalid
+      return;
+    }
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters');
+      return;
+    }
+    
+    setError('');  // Clear error if all validations pass
+    console.log('Logged in with:', email, password); // Handle login logic
   };
 
   return (
@@ -37,6 +53,10 @@ const Login = () => {
             required
           />
         </div>
+
+        {/* Display error message if there's an error */}
+        {error && <div className="error-message">{error}</div>}
+
         <button type="submit" className="submit-btn">Log In</button>
       </form>
       <div className="footer-link">
