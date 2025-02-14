@@ -25,7 +25,6 @@
     z-index: 1010; /* Ensure modal is above the overlay */
 }
 
-/* Close Button */
 .close-btn {
     position: absolute;
     top: 10px;

@@ -1,4 +1,3 @@
-// src/components/SignUp.js
 import React, { useState } from 'react';
 import '../FormStyles.css';
 
@@ -7,20 +6,52 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMsg('');
+    setSuccessMsg('');
+
     if (password !== confirmPassword) {
-      alert("Passwords don't match!");
+      setErrorMsg("Passwords don't match!");
       return;
     }
-    console.log('Signed up with:', name, email, password);
+
+    setLoading(true);
+    try {
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, password })
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        setErrorMsg(data.error || "An error occurred during sign up.");
+      } else {
+        setSuccessMsg("Sign up successful! Please log in.");
+        // Optionally reset fields
+        setName('');
+        setEmail('');
+        setPassword('');
+        setConfirmPassword('');
+      }
+    } catch (err) {
+      setErrorMsg("Network error. Please try again later.");
+    }
+    setLoading(false);
   };
 
   return (
     <div className="form-container">
       <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
+      {errorMsg && <div className="error-msg">{errorMsg}</div>}
+      {successMsg && <div className="success-msg">{successMsg}</div>}
+      <form onSubmit={handleSubmit} noValidate>
         <div className="input-group">
           <label htmlFor="name">Full Name</label>
           <input
@@ -65,10 +96,14 @@ const SignUp = () => {
             required
           />
         </div>
-        <button type="submit" className="submit-btn">Sign Up</button>
+        <button type="submit" className="submit-btn" disabled={loading}>
+          {loading ? "Signing Up..." : "Sign Up"}
+        </button>
       </form>
       <div className="footer-link">
-        <p>Already have an account? <a href="/login">Log In</a></p>
+        <p>
+          Already have an account? <a href="/login">Log In</a>
+        </p>
       </div>
     </div>
   );
