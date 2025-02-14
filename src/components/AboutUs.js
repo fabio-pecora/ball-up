@@ -1,18 +1,38 @@
 import React from 'react';
 import '../AboutUs.css';
 
+
+
 const AboutUs = () => {
   return (
     <div className="about-container">
       <section className="section goal">
-        <h2>Our Goal</h2>
-        <p>At BALL UP, our mission is to bring basketball lovers together, creating a vibrant community where everyone can share their passion for the game.</p>
-        <i className="icon fas fa-basketball-ball"></i>
+        <h2>
+          <i className="fas fa-basketball-ball"></i> Our Goal
+        </h2>
+        <ul>
+          <li>
+            <span role="img" aria-label="map">📍</span> Find Courts Near You
+          </li>
+          <li>
+            <span role="img" aria-label="basketball">🏀</span> Show Your Game
+          </li>
+          <li>
+            <span role="img" aria-label="chat">💬</span> Chat &amp; Set Up Runs
+          </li>
+          <li>
+            <span role="img" aria-label="network">🤝</span> Meet &amp; Network with Players
+          </li>
+        </ul>
       </section>
+
+
+
+
       
       <section className="section operate">
         <h2>Where We Operate</h2>
-        <p>We are currently active in multiple cities, connecting players, teams, and fans to make basketball more accessible and engaging for all.</p>
+        <p>We are currently active in the 5 boroughs of New York City!(Staten Island, Brooklyn, Manhattan, Bronx, and Queens).</p>
         <i className="icon fas fa-globe-americas"></i>
       </section>
       

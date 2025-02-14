@@ -12,8 +12,9 @@
 /* Section Titles */
 h2 {
   font-size: 2.8rem;
+  font-family: 'Courier New', Courier, monospace;
   margin-bottom: 20px;
-  color: #f47825;
+  color: #000000;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -37,41 +38,73 @@ p {
 }
 
 /* Goal Section */
-.goal {
-  background: linear-gradient(135deg, #ff6f00, #ff9100); /* Bright gradient */
-  color: white;
+.section.goal {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff9a9e, #f56f73); /* Clear pink to basketball orange */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.section.goal:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+.section.goal h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font: weight 1800px;;
 }
 
-.goal h2 {
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
+.section.goal h2 i {
+  margin-right: 0.5rem;
+  font-size: 2.6rem;
 }
 
-.goal p {
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
+/* List styling */
+.section.goal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.goal .icon {
-  font-size: 3rem;
-  margin-top: 20px;
+.section.goal ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
 }
 
-/* Operate Section */
-.operate {
-    background: url('https://static.vecteezy.com/system/resources/previews/004/806/882/non_2x/new-york-city-colorful-seamless-pattern-vector.jpg') repeat;
-    background-size: 350px; /* Keeps the original size for seamless effect */
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    align-items: center;
-    position: relative;
-    color: #f47825;  /* Orange text color for contrast */
+.section.goal ul li:hover {
+  transform: translateX(10px);
 }
+
+.section.goal ul li i {
+  margin-right: 0.8rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.section.goal ul li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 /* Operate Section */
 .operate {

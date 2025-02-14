@@ -5,11 +5,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #e70505, #fd6907); /* Black to Orange Gradient */
+    background: linear-gradient(135deg, #f74a4a, #ff934b); /* Black to Orange Gradient */
   }
   
-  
-
   .hero {
     color: rgb(255, 255, 255);
     text-align: center;
@@ -32,7 +30,7 @@ body {
   }
   
   .hero button {
-    background-color: #f47825;
+    background-color: #000000;
     color: white;
     padding: 10px 30px;
     border: none;
