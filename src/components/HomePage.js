@@ -13,7 +13,6 @@ const HomePage = () => {
         <p>FIND AND CONNECT WITH BASKETBALL COURTS NEAR YOU AND JOIN THE FUN!</p>
         <button>Get Started</button>
       </section>
-
       {/* Search Courts Section */}
       <section id="search-courts" className="search-courts">
         <h2>Search for Courts or Events</h2>

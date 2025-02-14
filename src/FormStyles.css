@@ -1,99 +1,80 @@
-/* src/components/FormStyles.css */
-
 /* General Form Container Styles */
 .form-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Input Fields Styles */
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  .input-group label {
-    display: block;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 5px;
-  }
-  
-  .input-group input,
-  .input-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .input-group input:focus,
-  .input-group textarea:focus {
-    border-color: #ff6600; /* Orange highlight */
-    outline: none;
-  }
-  
-  .input-group textarea {
-    height: 150px;
-    resize: vertical;
-  }
-  
-  /* Submit Button Styles */
-  .submit-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff6600; /* Orange */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #e65c00;
-  }
-  
-  /* Footer Link Styles */
-  .footer-link {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .footer-link a {
-    color: #ff6600;
-    text-decoration: none;
-  }
-  
-  .footer-link a:hover {
-    text-decoration: underline;
-  }
-  
-  /* src/components/FormStyles.css */
-
-.form-container {
-  margin-top: 80px; /* Account for fixed navbar */
+  margin-top: 100px; /* Increase the space from the top (title or navbar) */
   max-width: 400px;
   margin: 50px auto;
   padding: 30px;
   background: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Higher value to ensure it's in front of the title */
 }
 
+/* Form Heading (h2) Styles */
 h2 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
+}
+
+/* Additional form input and button styles (No changes needed here) */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #ff6600; /* Orange highlight */
+  outline: none;
+}
+
+.input-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6600; /* Orange */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e65c00;
+}
+
+.footer-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-link a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
 }
