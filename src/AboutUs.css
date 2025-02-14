@@ -191,10 +191,6 @@ p {
   color: white;
 }
 
-/* Team Section */
-/* Meet the Team Section */
-/* Import a nice font (e.g., 'Roboto') in your main CSS or index.html */
-/* Example: @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
 
 .section.meet-team {
   background: linear-gradient(135deg, #f8c23b, #f8e9c2, #f8c23b);
@@ -203,29 +199,8 @@ p {
   text-align: center;
   margin: 2rem auto;
   padding: 2rem 1rem;
-  font-family: 'Roboto', sans-serif;
-}
-
-.section.meet-team h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-/* Team member card */
-/* Import the Roboto font if not imported globally */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
-
-.section.meet-team {
-  background: linear-gradient(135deg, #f8c23b, #f8e9c2, #f8c23b);
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  margin: 2rem auto;
-  padding: 2rem 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .section.meet-team h2 {
@@ -283,7 +258,6 @@ p {
   color: #444;
 }
 
-/* Contact Info Box */
 .contact-info {
   background: rgba(240, 240, 240, 0.8);
   border-radius: 8px;
@@ -305,3 +279,53 @@ p {
   font-size: 1.2rem;
 }
 
+.involvement {
+  background: url('https://via.placeholder.com/1200x400/ff9100/FFFFFF?text=Get+Involved') no-repeat center center/cover; /* Background image */
+  color: white;
+  text-align: center;
+  font-style: italic;
+  border-left: 5px solid #f47825;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.involvement h2 {
+    font-family: 'Courier New', Courier, monospace;
+  color: #f47825;
+  font-size: 3rem;
+}
+
+.involvement p {
+  color: white;
+  font-weight: 300;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 600px;
+}
+
+.involvement .icon {
+  font-size: 4rem;
+  color: #f47825;
+  margin-top: 20px;
+}
+
+.section:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.section {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
