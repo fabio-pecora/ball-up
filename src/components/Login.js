@@ -1,69 +1,50 @@
 import React, { useState } from 'react';
-import '../FormStyles.css';
+import '../Form.css';
 
-const Login = () => {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');  // Add state to store error message
-
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Basic regex for email validation
-    return regex.test(email);
-  };
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    if (!validateEmail(email)) {
-      setError('Email is not in the right format'); // Set error if email is invalid
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setError('Invalid email format');
       return;
     }
     if (password.length < 6) {
       setError('Password must be at least 6 characters');
       return;
     }
-    
-    setError('');  // Clear error if all validations pass
-    console.log('Logged in with:', email, password); // Handle login logic
+    setError('');
+    alert('Login successful!');
   };
 
   return (
-    <div className="form-container">
+    <form onSubmit={handleSubmit} className="basketball-form">
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-
-        {/* Display error message if there's an error */}
-        {error && <div className="error-message">{error}</div>}
-
-        <button type="submit" className="submit-btn">Log In</button>
-      </form>
-      <div className="footer-link">
-        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+      <div className="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
       </div>
-    </div>
+      <div className="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+      </div>
+      {error && <p className="error">{error}</p>}
+      <button type="submit">Login</button>
+    </form>
   );
 };
 
-export default Login;
+export default LoginForm;

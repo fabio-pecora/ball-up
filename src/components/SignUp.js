@@ -1,112 +1,90 @@
 import React, { useState } from 'react';
-import '../FormStyles.css';
+import '../Form.css';  // Ensure to use the updated CSS below
 
-const SignUp = () => {
-  const [name, setName] = useState('');
+const SignupForm = () => {
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
-  const [successMsg, setSuccessMsg] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [username, setUsername] = useState('');
+  const [shareLocation, setShareLocation] = useState(false);
+  const [level, setLevel] = useState('beginner');
+  const [error, setError] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setErrorMsg('');
-    setSuccessMsg('');
-
-    if (password !== confirmPassword) {
-      setErrorMsg("Passwords don't match!");
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setError('Invalid email format');
       return;
     }
-
-    setLoading(true);
-    try {
-      const response = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, password })
-      });
-      const data = await response.json();
-      if (!response.ok) {
-        setErrorMsg(data.error || "An error occurred during sign up.");
-      } else {
-        setSuccessMsg("Sign up successful! Please log in.");
-        // Optionally reset fields
-        setName('');
-        setEmail('');
-        setPassword('');
-        setConfirmPassword('');
-      }
-    } catch (err) {
-      setErrorMsg("Network error. Please try again later.");
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters');
+      return;
     }
-    setLoading(false);
+    setError('');
+    alert(`Sign Up successful for ${fullName}!`);
   };
 
   return (
-    <div className="form-container">
+    <form onSubmit={handleSubmit} className="basketball-form">
       <h2>Sign Up</h2>
-      {errorMsg && <div className="error-msg">{errorMsg}</div>}
-      {successMsg && <div className="success-msg">{successMsg}</div>}
-      <form onSubmit={handleSubmit} noValidate>
-        <div className="input-group">
-          <label htmlFor="name">Full Name</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your full name"
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Create a password"
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="confirm-password">Confirm Password</label>
-          <input
-            type="password"
-            id="confirm-password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="Confirm your password"
-            required
-          />
-        </div>
-        <button type="submit" className="submit-btn" disabled={loading}>
-          {loading ? "Signing Up..." : "Sign Up"}
-        </button>
-      </form>
-      <div className="footer-link">
-        <p>
-          Already have an account? <a href="/login">Log In</a>
-        </p>
+      <div className="form-group">
+        <label>Full Name</label>
+        <input
+          type="text"
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+          required
+        />
       </div>
-    </div>
+      <div className="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Username</label>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>
+          <input
+            type="checkbox"
+            checked={shareLocation}
+            onChange={() => setShareLocation(!shareLocation)}
+          />
+          Allow sharing my location
+        </label>
+      </div>
+      <div className="form-group">
+        <label>Basketball Level</label>
+        <select value={level} onChange={(e) => setLevel(e.target.value)} required>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+      {error && <p className="error">{error}</p>}
+      <button type="submit">Sign Up</button>
+    </form>
   );
 };
 
-export default SignUp;
+export default SignupForm;
