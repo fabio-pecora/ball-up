@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Form.css';  // Ensure to use the updated CSS below
+import '../Form.css';  // Ensure to use the same styles
 
 const SignupForm = () => {
   const [fullName, setFullName] = useState('');
@@ -72,6 +72,9 @@ const SignupForm = () => {
           />
           Allow sharing my location
         </label>
+        <p className="info-text">
+          Sharing your location helps us show you how many people are at a basketball court so you can see who’s playing nearby.
+        </p>
       </div>
       <div className="form-group">
         <label>Basketball Level</label>
