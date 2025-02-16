@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Form.css';  // Ensure to use the same styles
+import '../Form.css';  // Ensure to use the updated styles
 
 const SignupForm = () => {
   const [fullName, setFullName] = useState('');
@@ -7,6 +7,7 @@ const SignupForm = () => {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const [shareLocation, setShareLocation] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
   const [level, setLevel] = useState('beginner');
   const [error, setError] = useState('');
 
@@ -72,9 +73,14 @@ const SignupForm = () => {
           />
           Allow sharing my location
         </label>
-        <p className="info-text">
-          Sharing your location helps us show you how many people are at a basketball court so you can see who’s playing nearby.
+        <p className="info-toggle" onClick={() => setShowInfo(!showInfo)}>
+          Why do we need it?
         </p>
+        {showInfo && (
+          <p className="info-text">
+            Sharing your location helps us show you how many people are at a basketball court, so you can see who’s playing nearby.
+          </p>
+        )}
       </div>
       <div className="form-group">
         <label>Basketball Level</label>
