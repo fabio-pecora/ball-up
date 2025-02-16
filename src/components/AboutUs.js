@@ -11,7 +11,7 @@ const AboutUs = () => {
         </h2>
         <ul>
           <li>
-            <span role="img" aria-label="map">📍</span> Find Courts Near You 
+            <span role="img" aria-label="map">📍</span> Find Every Court Near You 
           </li>
           <li>
             <span role="img" aria-label="basketball">🏀</span> Show Your Game
