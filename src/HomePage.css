@@ -53,7 +53,7 @@ body {
   .search-courts h2 {
     font-size: 2rem;
     margin-bottom: 40px;
-    color: #f47825;
+    color: #f74a4a;
   }
   
   .search-options {
@@ -74,7 +74,7 @@ body {
   .search-option h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #f47825;
+    color: #ee2a2a;
   }
   
   .search-option p {
@@ -92,7 +92,7 @@ body {
   }
   
   .search-option button {
-    background-color: #f47825;
+    background-color: #000000;
     padding: 10px 20px;
     border: none;
     color: white;
@@ -102,7 +102,7 @@ body {
   }
   
   .search-option button:hover {
-    background-color: #ff6a00;
+    background-color: #6e0000;
   }
   
   /* Footer */

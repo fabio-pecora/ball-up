@@ -11,7 +11,6 @@ const HomePage = () => {
       <section className="hero">
         <h1>Ball Up</h1>
         <p>FIND AND CONNECT WITH BASKETBALL COURTS NEAR YOU AND JOIN THE FUN!</p>
-        <button>Get Started</button>
       </section>
       {/* Search Courts Section */}
       <section id="search-courts" className="search-courts">
