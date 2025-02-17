@@ -7,7 +7,7 @@
   }
   
   .contact-card {
-    background: linear-gradient(135deg, #ff8c00, #ff4500);
+    background: linear-gradient(135deg, #000000, #4b0202);
     color: white;
     padding: 2rem;
     border-radius: 15px;
@@ -20,7 +20,7 @@
   .input-wrapper {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #df9a9a, #df9a9a, #df9a9a, #df9a9a);
     padding: 10px;
     border-radius: 5px;
     margin: 10px 0;
@@ -35,7 +35,7 @@
     background: transparent;
     border: none;
     outline: none;
-    color: white;
+    color: rgb(255, 255, 255);
     width: 100%;
   }
   
@@ -44,8 +44,8 @@
   }
   
   .submit-btn {
-    background: black;
-    color: orange;
+    background: rgb(187, 66, 66);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     padding: 12px;
     border-radius: 30px;
@@ -55,10 +55,10 @@
   }
   
   .submit-btn:hover {
-    background: gray;
+    background: rgb(0, 0, 0);
   }
   
   .contact-color {
-    color: #080706;
+    color: #ffa144;
     text-align: center;
   }
