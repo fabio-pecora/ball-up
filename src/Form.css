@@ -3,15 +3,16 @@ body {
 }
 
 .basketball-form {
-  background-color: #ff5858; /* Dark background */
+  background-color: #0e0e0e; /* Dark background */
   padding: 20px;
   border-radius: 10px;
+  border-color: #df9a9a;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .basketball-form h2 {
-  color: #d97706; /* Muted orange */
+  color: #df9a9a; /* Muted orange */
   font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
@@ -32,7 +33,7 @@ input, select {
   padding: 10px;
   border: 1px solid #000000;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #df9a9a;
   color: white;
 }
 
@@ -44,7 +45,7 @@ input[type="checkbox"] {
 button {
   width: 100%;
   padding: 12px;
-  background-color: #d97706;
+  background-color: #df9a9a;
   color: white;
   border: none;
   border-radius: 5px;
@@ -54,7 +55,7 @@ button {
 }
 
 button:hover {
-  background-color: #b45309;
+  background-color: #df9a9a;
 }
 
 .error {
@@ -65,7 +66,7 @@ button:hover {
 }
 
 .info-toggle {
-  color: #d97706;
+  color: #df9a9a;
   font-size: 0.9rem;
   cursor: pointer;
   margin-top: 5px;

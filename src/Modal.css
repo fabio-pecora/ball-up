@@ -14,9 +14,9 @@
 .modal-content {
     background: #1c1c1c; /* Dark background to match the form */
     padding: 20px 30px;
-    border-radius: 10px;
+    border-radius: 50px;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
     position: relative;
     max-width: 450px;
     width: 100%;
