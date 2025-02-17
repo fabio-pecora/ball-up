@@ -3,7 +3,7 @@ body {
 }
 
 .basketball-form {
-  background-color: #1c1c1c; /* Dark background */
+  background-color: #ff5858; /* Dark background */
   padding: 20px;
   border-radius: 10px;
   color: white;
@@ -30,9 +30,9 @@ label {
 input, select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #d97706;
+  border: 1px solid #000000;
   border-radius: 5px;
-  background-color: #333;
+  background-color: #ffffff;
   color: white;
 }
 
