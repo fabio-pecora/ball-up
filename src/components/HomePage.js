@@ -37,7 +37,7 @@ const HomePage = () => {
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2025 Basketball Finder. All Rights Reserved.</p>
+        <p>&copy; 2025 Ball Up. All Rights Reserved.</p>
       </footer>
     </div>
   );
