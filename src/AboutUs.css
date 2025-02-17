@@ -46,7 +46,7 @@ p {
   color: #fff;
   padding: 2rem 3rem;
   border-radius: 16px;
-  background: linear-gradient(135deg, #ff9a9e, #f56f73); /* Clear pink to basketball orange */
+  background: linear-gradient(135deg, #ff9a9e, #f56f73); 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
@@ -193,7 +193,7 @@ p {
 
 
 .section.meet-team {
-  background: linear-gradient(135deg, #f8c23b, #f8d57a, #f8c23b);
+  background: linear-gradient(135deg, #f78387, #f1474c);
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   text-align: center;
