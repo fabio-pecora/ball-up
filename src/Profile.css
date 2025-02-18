@@ -27,7 +27,7 @@ body {
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    border: 4px solid #ff9800;
+    border: 4px solid #000000;
   }
   
   .profile-info {
@@ -55,7 +55,7 @@ body {
   }
   
   .follow-btn, .message-btn {
-    background-color: #ff9800;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -110,7 +110,7 @@ body {
   }
   
   .add-media-button {
-    background-color: #ff9800;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 8px 12px;
