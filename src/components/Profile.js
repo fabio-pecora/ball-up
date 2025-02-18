@@ -4,7 +4,12 @@ import "../Profile.css";
 
 export default function Profile() {
   const [user, setUser] = useState(null);
-  const [media, setMedia] = useState([]);
+  const [media, setMedia] = useState([
+    "https://cdn.nba.com/videos/dribble-move.mp4",
+    "https://cdn.nba.com/photos/dunk-action.jpg",
+    "https://cdn.nba.com/photos/three-pointer.jpg",
+    "https://cdn.nba.com/videos/crossover-highlight.mp4"
+  ]);
   const [newMedia, setNewMedia] = useState("");
 
   useEffect(() => {
@@ -13,15 +18,15 @@ export default function Profile() {
       setUser(storedUser);
     } else {
       setUser({
-        name: "Guest User",
-        email: "guest@example.com",
-        level: "Beginner",
-        introduction: "Welcome to my profile!",
-        favTeams: "Not provided",
-        profilePicture: "https://via.placeholder.com/150",
-        posts: 120,
-        followers: 10.5,
-        following: 98,
+        name: "Basketball Pro",
+        email: "bballpro@example.com",
+        level: "Advanced",
+        introduction: "Passionate about basketball. Love playing and analyzing the game!",
+        favTeams: "Los Angeles Lakers, Golden State Warriors",
+        profilePicture: "https://cdn.nba.com/profiles/lebron.jpg",
+        posts: 230,
+        followers: 25.4,
+        following: 180,
       });
     }
   }, []);
@@ -70,8 +75,11 @@ export default function Profile() {
         <div className="media-grid">
           {media.map((item, index) => (
             <div key={index} className="media-item">
-              {item.includes("youtube") ? (
-                <iframe width="100%" height="200" src={item} frameBorder="0" allowFullScreen></iframe>
+              {item.includes(".mp4") ? (
+                <video width="100%" height="180" controls>
+                  <source src={item} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               ) : (
                 <img src={item} alt="User Upload" className="media-image" />
               )}
