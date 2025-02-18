@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import NavBar from "../components/NavBar"; // Ensure exact case
+import NavBar from "../components/NavBar";
 import "../Profile.css";
 
 export default function Profile() {
@@ -19,6 +19,9 @@ export default function Profile() {
         introduction: "Welcome to my profile!",
         favTeams: "Not provided",
         profilePicture: "https://via.placeholder.com/150",
+        posts: 120,
+        followers: 10.5,
+        following: 98,
       });
     }
   }, []);
@@ -42,12 +45,20 @@ export default function Profile() {
           alt="Profile"
           className="profile-image"
         />
-        <h2 className="profile-name">{user.name}</h2>
-        <p className="profile-email">{user.email}</p>
-        <p className="profile-level">{user.level}</p>
+        <div className="profile-info">
+          <h2 className="profile-name">{user.name}</h2>
+          <div className="profile-stats">
+            <span><strong>{user.posts}</strong> Posts</span>
+            <span><strong>{user.followers}K</strong> Followers</span>
+            <span><strong>{user.following}</strong> Following</span>
+          </div>
+          <div className="profile-actions">
+            <button className="follow-btn">Follow</button>
+            <button className="message-btn">Message</button>
+          </div>
+        </div>
       </div>
       <div className="profile-bio">
-        <h3>Introduction</h3>
         <p>{user.introduction}</p>
       </div>
       <div className="profile-favorites">
