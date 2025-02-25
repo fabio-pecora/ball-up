@@ -1,16 +1,28 @@
 import { useState, useEffect } from "react";
-import NavBar from "../components/NavBar";
 import "../Profile.css";
 
 export default function Profile() {
   const [user, setUser] = useState(null);
   const [media, setMedia] = useState([
-    "https://cdn.nba.com/videos/dribble-move.mp4",
-    "https://cdn.nba.com/photos/dunk-action.jpg",
-    "https://cdn.nba.com/photos/three-pointer.jpg",
-    "https://cdn.nba.com/videos/crossover-highlight.mp4"
+    {
+      videoUrl: "https://cdn.nba.com/videos/dribble-move.mp4",
+      thumbnail: "https://cdn.nba.com/thumbnails/dribble-move.jpg"
+    },
+    {
+      videoUrl: "https://cdn.nba.com/videos/dunk-action.mp4",
+      thumbnail: "https://cdn.nba.com/thumbnails/dunk-action.jpg"
+    },
+    {
+      videoUrl: "https://cdn.nba.com/videos/three-pointer.mp4",
+      thumbnail: "https://cdn.nba.com/thumbnails/three-pointer.jpg"
+    },
+    {
+      videoUrl: "https://cdn.nba.com/videos/crossover-highlight.mp4",
+      thumbnail: "https://cdn.nba.com/thumbnails/crossover-highlight.jpg"
+    }
   ]);
   const [newMedia, setNewMedia] = useState("");
+  const [modalVideo, setModalVideo] = useState(null);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -31,9 +43,18 @@ export default function Profile() {
     }
   }, []);
 
+  // When adding new media via URL, we don’t have a thumbnail.
+  // A placeholder image is used as a fallback.
   const handleAddMedia = () => {
     if (newMedia.trim() !== "") {
-      setMedia([...media, newMedia]);
+      setMedia([
+        ...media,
+        {
+          videoUrl: newMedia,
+          thumbnail:
+            "https://via.placeholder.com/180x180?text=No+Thumbnail"
+        }
+      ]);
       setNewMedia("");
     }
   };
@@ -75,21 +96,20 @@ export default function Profile() {
         <div className="media-grid">
           {media.map((item, index) => (
             <div key={index} className="media-item">
-              {item.includes(".mp4") ? (
-                <video width="100%" height="180" controls>
-                  <source src={item} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              ) : (
-                <img src={item} alt="User Upload" className="media-image" />
-              )}
+              <img
+                src={item.thumbnail}
+                alt="Video preview"
+                className="media-image"
+                onClick={() => setModalVideo(item.videoUrl)}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           ))}
         </div>
         <div className="media-input">
           <input
             type="text"
-            placeholder="Paste image/video URL"
+            placeholder="Paste video URL"
             value={newMedia}
             onChange={(e) => setNewMedia(e.target.value)}
           />
@@ -98,6 +118,25 @@ export default function Profile() {
           </button>
         </div>
       </div>
+      {modalVideo && (
+        <div className="modal" onClick={() => setModalVideo(null)}>
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span
+              className="modal-close"
+              onClick={() => setModalVideo(null)}
+            >
+              &times;
+            </span>
+            <video width="100%" height="auto" controls autoPlay>
+              <source src={modalVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
