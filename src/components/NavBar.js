@@ -13,6 +13,7 @@ const Navbar = () => {
     setShowModal(true);
   };
 
+  
   const closeModal = () => setShowModal(false);
   return (
     <>
