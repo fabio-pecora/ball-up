@@ -14,7 +14,6 @@ const Navbar = () => {
   };
 
   const closeModal = () => setShowModal(false);
-
   return (
     <>
       <nav className="navbar">
